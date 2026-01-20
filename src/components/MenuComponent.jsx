@@ -54,11 +54,14 @@ const MenuComponent = ({ menuItems, uniqueCategories }) => {
       {/* Menu Items - Filtered based on selected category */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredItems.map((item, index) => (
-          <div key={index} className="menu-card card-hover">
+          <div
+            key={index}
+            className={`menu-card card-hovern ${!item.stock ? "hidden" : item.stock < 1 ? "grayscale" : ""}`}
+          >
             <img
               src={item?.imageUrl || "https://placehold.co/600x400"}
               alt={item?.name}
-              className="menu-image"
+              className={`menu-image`}
             />
             <div className="menu-content">
               <div className="flex justify-between items-start mb-2">
@@ -114,9 +117,7 @@ const MenuComponent = ({ menuItems, uniqueCategories }) => {
                   <p className="text-yellow-600 font-semibold text-lg">
                     {selectedItem.category}
                   </p>
-                  <p className="text-gray-700">
-                    {selectedItem.description}
-                  </p>
+                  <p className="text-gray-700">{selectedItem.description}</p>
                   <p className="text-2xl font-bold text-black">
                     {selectedItem.price}
                   </p>
