@@ -13,12 +13,17 @@
 }
 
 body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   @apply bg-white text-gray-800;
 }
 
 /* Typography for New York Modern Style */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   @apply font-sans tracking-tight;
 }
 
@@ -32,27 +37,6 @@ h2 {
 
 h3 {
   @apply text-2xl font-bold;
-}
-
-/* Navigation styles */
-.navbar {
-  @apply py-4 px-6 shadow-md bg-white sticky top-0 z-50;
-}
-
-.navbar-brand {
-  @apply text-2xl font-bold text-black hover:text-gray-700 transition duration-300 tracking-tighter;
-}
-
-.nav-link {
-  @apply text-gray-700 hover:text-black transition duration-300 px-3 py-2 rounded-md font-medium;
-}
-
-.nav-link.active {
-  @apply text-black border-b-2 border-yellow-500;
-}
-
-.hamburger {
-  @apply md:hidden focus:outline-none;
 }
 
 /* Hero section */
