@@ -83,7 +83,7 @@ h3 {
 }
 
 .menu-description {
-  @apply text-gray-600 mb-4;
+  @apply text-gray-600 mb-4 line-clamp-2;
 }
 
 .menu-price {
