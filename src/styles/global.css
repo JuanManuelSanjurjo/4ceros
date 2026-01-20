@@ -92,7 +92,7 @@ h3 {
 
 /* Category tabs */
 .category-tab {
-  @apply px-6 py-3 m-2 text-lg font-medium rounded-full cursor-pointer transition-all duration-300;
+  @apply px-6 py-2 md:py-3 m-2 text-sm md:text-lg font-medium rounded-full cursor-pointer transition-all duration-300;
 }
 
 .category-tab.active {

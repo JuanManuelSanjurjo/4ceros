@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
+import SkeletonMenu from "./SkeletonMenu.jsx";
+import FoodModal from "./FoodModal.jsx";
 
 const MenuComponent = ({ menuItems, uniqueCategories }) => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedItem, setSelectedItem] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
-  // Filter menu items based on selected category
   const filteredItems =
     selectedCategory === "all"
       ? menuItems
@@ -19,8 +21,15 @@ const MenuComponent = ({ menuItems, uniqueCategories }) => {
   };
 
   useEffect(() => {
-    console.log(selectedCategory);
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 300);
+    return () => clearTimeout(timer);
   }, []);
+
+  if (isLoading) {
+    return <SkeletonMenu />;
+  }
 
   return (
     <div className="mt-12">
@@ -34,7 +43,7 @@ const MenuComponent = ({ menuItems, uniqueCategories }) => {
           }`}
           onClick={() => setSelectedCategory("all")}
         >
-          All
+          Todo
         </button>
         {uniqueCategories.map((category) => (
           <button
@@ -83,49 +92,7 @@ const MenuComponent = ({ menuItems, uniqueCategories }) => {
 
       {/* Modal for displaying item details */}
       {selectedItem && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4"
-          onClick={closeModal}
-        >
-          <div
-            className="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="p-6">
-              <div className="flex justify-between items-start mb-4">
-                <h2 className="text-2xl font-bold text-gray-900">
-                  {selectedItem.name}
-                </h2>
-                <button
-                  className="text-gray-500 hover:text-gray-800 text-3xl leading-none"
-                  onClick={closeModal}
-                >
-                  &times;
-                </button>
-              </div>
-              <div className="space-y-4">
-                <div>
-                  <img
-                    src={
-                      selectedItem.imageUrl || "https://placehold.co/600x400"
-                    }
-                    alt={selectedItem.name}
-                    className="w-full h-64 object-cover rounded-lg"
-                  />
-                </div>
-                <div className="space-y-3">
-                  <p className="text-yellow-600 font-semibold text-lg">
-                    {selectedItem.category}
-                  </p>
-                  <p className="text-gray-700">{selectedItem.description}</p>
-                  <p className="text-2xl font-bold text-black">
-                    {selectedItem.price}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <FoodModal selectedItem={selectedItem} closeModal={closeModal} />
       )}
     </div>
   );

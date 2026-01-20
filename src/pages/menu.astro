@@ -28,17 +28,24 @@ try {
   <section class="py-16 bg-gray-50">
     <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <h1 class="text-4xl font-bold text-gray-900 mb-4">Our Menu</h1>
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">Nuestro menú</h1>
         <div class="h-1 w-20 bg-yellow-500 mx-auto mb-6"></div>
-        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Carefully crafted dishes with premium ingredients</p>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Cuidadosamente preparados con ingredientes de alta calidad</p>
       </div>
 
       {menuData && menuData.menu ? (
-        <MenuComponent client:load menuItems={menuData.menu} uniqueCategories={uniqueCategories} />
+        <div id="menu-container">
+          <MenuComponent client:load menuItems={menuData.menu} uniqueCategories={uniqueCategories} />
+        </div>
+      ) : menuData === null ? (
+        <div class="text-center py-12">
+          <div class="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-yellow-500 mb-4"></div>
+          <p class="text-xl text-gray-600">Cargando menu...</p>
+        </div>
       ) : (
         <div class="text-center py-12">
-          <h2 class="text-2xl font-bold text-red-600">Unable to load menu</h2>
-          <p class="mt-4 text-gray-600">Please try again later or contact the restaurant directly.</p>
+          <h2 class="text-2xl font-bold text-red-600">No se pudo cargar el menú</h2>
+          <p class="mt-4 text-gray-600">Por favor, inténtelo de nuevo más tarde o póngase en contacto con el restaurante directamente.</p>
         </div>
       )}
     </div>
