@@ -1,16 +1,51 @@
 import React, { useState, useEffect } from "react";
 import SkeletonMenu from "./SkeletonMenu.jsx";
-import FoodModal from "./FoodModal.jsx";
+import ModalSelectedDish from "./ModalSelectedDish.jsx";
+import MenuItems from "./MenuItems.jsx";
+import Categories from "./Categories.jsx";
 
-const MenuComponent = ({ menuItems, uniqueCategories }) => {
+const MenuComponent = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedItem, setSelectedItem] = useState(null);
+  const [menuItems, setMenuItems] = useState([]);
+  const [uniqueCategories, setUniqueCategories] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
 
-  const filteredItems =
-    selectedCategory === "all"
-      ? menuItems
-      : menuItems.filter((item) => item.category === selectedCategory);
+  useEffect(() => {
+    const fetchMenuData = async () => {
+      try {
+        const response = await fetch(
+          "https://script.google.com/macros/s/AKfycbxwh-FhCq2zmdU166CyM_WfTIHaNZWufY35WhuDblAGWNDcCUfhgDAN9AxGKuTruGGYpw/exec",
+        );
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        setMenuItems(data.menu);
+
+        const categories = [...new Set(data.menu.map((item) => item.category))];
+        setUniqueCategories(categories);
+
+        setIsLoading(false);
+      } catch (error) {
+        console.error("Error fetching menu data:", error);
+        setHasError(true);
+        setIsLoading(false);
+      }
+    };
+
+    fetchMenuData();
+  }, []);
+
+  const filteredItems = React.useMemo(() => {
+    if (selectedCategory === "all") {
+      return menuItems;
+    }
+    return menuItems.filter((item) => item.category === selectedCategory);
+  }, [selectedCategory, menuItems]);
 
   const openModal = (item) => {
     setSelectedItem(item);
@@ -20,79 +55,27 @@ const MenuComponent = ({ menuItems, uniqueCategories }) => {
     setSelectedItem(null);
   };
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 300);
-    return () => clearTimeout(timer);
-  }, []);
+  if (isLoading) return <SkeletonMenu />;
 
-  if (isLoading) {
-    return <SkeletonMenu />;
-  }
+  if (hasError) return <ErrorMenuFetch />;
 
   return (
-    <div className="mt-12">
+    <div className="mt-10">
       {/* Category Tabs - Static, always visible */}
-      <div className="flex flex-wrap justify-center gap-2 mb-12">
-        <button
-          className={`category-tab ${
-            selectedCategory === "all"
-              ? "active bg-black text-white"
-              : "inactive bg-gray-200 text-gray-700"
-          }`}
-          onClick={() => setSelectedCategory("all")}
-        >
-          Todo
-        </button>
-        {uniqueCategories.map((category) => (
-          <button
-            key={category}
-            className={`category-tab ${
-              selectedCategory === category
-                ? "active bg-black text-white"
-                : "inactive bg-gray-200 text-gray-700"
-            }`}
-            onClick={() => setSelectedCategory(category)}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
-
+      <Categories
+        uniqueCategories={uniqueCategories}
+        selectedCategory={selectedCategory}
+        setSelectedCategory={setSelectedCategory}
+      />
       {/* Menu Items - Filtered based on selected category */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {filteredItems.map((item, index) => (
-          <div
-            key={index}
-            className={`menu-card card-hovern ${!item.stock ? "hidden" : item.stock < 1 ? "grayscale" : ""}`}
-          >
-            <img
-              src={item?.imageUrl || "https://placehold.co/600x400"}
-              alt={item?.name}
-              className={`menu-image`}
-            />
-            <div className="menu-content">
-              <div className="flex justify-between items-start mb-2">
-                <h3 className="menu-name">{item.name}</h3>
-                <span className="menu-price">{item.price}</span>
-              </div>
-              <span className="menu-category">{item.category}</span>
-              <p className="menu-description">{item.description}</p>
-              <button
-                className="btn btn-primary mt-4 w-full py-3 font-semibold"
-                onClick={() => openModal(item)}
-              >
-                View Details
-              </button>
-            </div>
-          </div>
-        ))}
-      </div>
+      <MenuItems openModal={openModal} filteredItems={filteredItems} />
 
       {/* Modal for displaying item details */}
       {selectedItem && (
-        <FoodModal selectedItem={selectedItem} closeModal={closeModal} />
+        <ModalSelectedDish
+          selectedItem={selectedItem}
+          closeModal={closeModal}
+        />
       )}
     </div>
   );
