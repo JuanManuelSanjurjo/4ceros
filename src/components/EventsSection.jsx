@@ -2,7 +2,13 @@ import { motion } from 'framer-motion';
 
 const EventsSection = () => {
   return (
-    <section className="py-20 bg-gray-50">
+    <motion.section 
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="py-20 bg-gray-50"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -30,6 +36,7 @@ const EventsSection = () => {
               className="rounded-xl shadow-xl w-full h-auto transform transition duration-500 hover:scale-105"
             />
           </motion.div>
+          
           <motion.div 
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -51,7 +58,7 @@ const EventsSection = () => {
           </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

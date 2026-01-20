@@ -1,0 +1,36 @@
+17:53:43 [types] Generated 0ms
+17:53:43 [content] Syncing content
+17:53:43 [content] Astro config changed
+17:53:43 [content] Clearing content store
+17:53:43 [content] Synced content
+
+ astro  v5.16.11 ready in 419 ms
+
+┃ Local    http://localhost:4326/
+┃ Network  http://172.31.210.251:4326/
+
+17:53:43 watching for file changes...
+17:54:30 [200] / 304ms
+17:54:41 [200] /menu 9ms
+17:54:48 [200] / 20ms
+17:55:03 [200] / 17ms
+17:55:49 [watch] src/components/HeroSection.astro
+17:55:49 [watch] src/components/HeroSection.astro
+17:55:49 [200] / 86ms
+17:55:51 [watch] src/components/EventsSection.astro
+17:55:51 [watch] src/components/EventsSection.astro
+17:55:52 [200] / 75ms
+17:55:56 [watch] src/components/ShowsSection.astro
+17:55:56 [watch] src/components/ShowsSection.astro
+17:55:56 [200] / 80ms
+17:56:36 [200] / 13ms
+17:56:43 [200] /menu 8ms
+17:56:50 [200] / 14ms
+17:57:34 [200] / 12ms
+17:57:38 [200] / 15ms
+17:57:39 [200] /menu 9ms
+17:57:40 [200] / 15ms
+17:57:49 [200] /menu 11ms
+18:06:12 [200] /menu 9ms
+18:06:31 [200] /menu 8ms
+18:07:07 [200] /menu 10ms

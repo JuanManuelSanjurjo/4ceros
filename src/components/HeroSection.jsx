@@ -1,29 +1,13 @@
 import { motion } from 'framer-motion';
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2
-    }
-  }
-};
-
-const itemVariants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6
-    }
-  }
-};
-
 const HeroSection = () => {
   return (
-    <section className="relative bg-gray-900">
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="relative bg-gray-900"
+    >
       <div className="absolute inset-0 overflow-hidden">
         <img
           src="/papayburger.jpg"
@@ -35,42 +19,44 @@ const HeroSection = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
         <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
           className="text-center"
         >
           <motion.div
-            variants={itemVariants}
-            transition={{ delay: 0.2 }}
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
             className="mb-6"
           >
-            <img
-              src="/4ceros.jpg"
-              alt="4Ceros Logo"
+            <img 
+              src="/4ceros.jpg" 
+              alt="4Ceros Logo" 
               className="mx-auto h-24 w-auto rounded-full border-4 border-yellow-500"
             />
           </motion.div>
           
           <motion.h1 
-            variants={itemVariants}
-            transition={{ delay: 0.4 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
             className="text-4xl md:text-6xl font-bold text-white mb-4"
           >
             Bienvenidos a 4Ceros
           </motion.h1>
           
           <motion.div 
-            variants={itemVariants}
-            transition={{ delay: 0.6 }}
-            className="h-1 bg-yellow-500 mx-auto mb-6"
-            style={{ width: 0 }}
+            initial={{ width: 0 }}
             animate={{ width: 80 }}
+            transition={{ delay: 0.6, duration: 0.5 }}
+            className="h-1 bg-yellow-500 mx-auto mb-6"
           ></motion.div>
           
           <motion.p 
-            variants={itemVariants}
-            transition={{ delay: 0.8 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 0.6 }}
             className="text-xl text-white mb-10 max-w-3xl mx-auto"
           >
             Tu lugar favorito para disfrutar de deliciosas hamburguesas y eventos inolvidables
@@ -78,8 +64,9 @@ const HeroSection = () => {
           
           <motion.a 
             href="/menu"
-            variants={itemVariants}
-            transition={{ delay: 1.0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.0, duration: 0.6 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-block bg-black text-white px-8 py-4 rounded-md font-bold transition duration-300 tracking-wide hover:bg-gray-800"
@@ -88,7 +75,7 @@ const HeroSection = () => {
           </motion.a>
         </motion.div>
       </div>
-    </section>
+    </motion.div>
   );
 };
 

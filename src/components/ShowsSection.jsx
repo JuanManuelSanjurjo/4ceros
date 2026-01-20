@@ -1,32 +1,16 @@
 import { motion } from 'framer-motion';
 
 const ShowsSection = () => {
-  // Variants for staggered animations
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5
-      }
-    }
-  };
-
   return (
-    <section className="py-20 bg-white">
+    <motion.section 
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="py-20 bg-white"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
+        <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -38,15 +22,12 @@ const ShowsSection = () => {
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">Disfruta de presentaciones en vivo en nuestro local</p>
         </motion.div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
-        >
-          <motion.div
-            variants={itemVariants}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
             whileHover={{ y: -10 }}
             className="bg-gray-50 rounded-xl p-8 shadow-lg transform transition duration-500 hover:shadow-xl"
           >
@@ -59,8 +40,11 @@ const ShowsSection = () => {
             </p>
           </motion.div>
 
-          <motion.div
-            variants={itemVariants}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             whileHover={{ y: -10 }}
             className="bg-gray-50 rounded-xl p-8 shadow-lg transform transition duration-500 hover:shadow-xl"
           >
@@ -73,8 +57,11 @@ const ShowsSection = () => {
             </p>
           </motion.div>
 
-          <motion.div
-            variants={itemVariants}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
             whileHover={{ y: -10 }}
             className="bg-gray-50 rounded-xl p-8 shadow-lg transform transition duration-500 hover:shadow-xl"
           >
@@ -86,24 +73,24 @@ const ShowsSection = () => {
               Combina buena música con nuestra deliciosa comida en un ambiente cálido y acogedor.
             </p>
           </motion.div>
-        </motion.div>
-
-        <motion.div
+        </div>
+        
+        <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-16 text-center"
         >
-          <a
-            href="#"
+          <a 
+            href="#" 
             className="inline-block bg-black text-white px-8 py-4 rounded-md font-bold transition duration-300 tracking-wide hover:bg-gray-800"
           >
             Consultar Próximos Shows
           </a>
         </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
