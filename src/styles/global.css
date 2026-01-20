@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for New York Modern Restaurant */
+:root {
+  --primary-color: #d4af37; /* Gold accent */
+  --secondary-color: #000000; /* Black */
+  --accent-color: #c0c0c0; /* Silver */
+  --text-color: #333333;
+  --bg-light: #ffffff;
+  --bg-dark: #f5f5f5;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  @apply bg-white text-gray-800;
+}
+
+/* Typography for New York Modern Style */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-sans tracking-tight;
+}
+
+h1 {
+  @apply text-5xl md:text-6xl font-bold;
+}
+
+h2 {
+  @apply text-4xl font-bold;
+}
+
+h3 {
+  @apply text-2xl font-bold;
+}
+
+/* Navigation styles */
+.navbar {
+  @apply py-4 px-6 shadow-md bg-white sticky top-0 z-50;
+}
+
+.navbar-brand {
+  @apply text-2xl font-bold text-black hover:text-gray-700 transition duration-300 tracking-tighter;
+}
+
+.nav-link {
+  @apply text-gray-700 hover:text-black transition duration-300 px-3 py-2 rounded-md font-medium;
+}
+
+.nav-link.active {
+  @apply text-black border-b-2 border-yellow-500;
+}
+
+.hamburger {
+  @apply md:hidden focus:outline-none;
+}
+
+/* Hero section */
+.hero {
+  @apply bg-cover bg-center min-h-screen flex items-center justify-center;
+}
+
+.hero-content {
+  @apply text-center p-8 bg-white bg-opacity-90 rounded-lg shadow-lg max-w-3xl mx-auto;
+}
+
+/* Section styling */
+.section {
+  @apply py-20 px-4;
+}
+
+.section-title {
+  @apply text-4xl font-bold mb-4 text-center text-black tracking-tight;
+}
+
+.section-subtitle {
+  @apply text-xl text-center text-gray-600 mb-12;
+}
+
+/* Menu card styling */
+.menu-card {
+  @apply bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+}
+
+.menu-image {
+  @apply w-full h-48 object-cover;
+}
+
+.menu-content {
+  @apply p-6;
+}
+
+.menu-name {
+  @apply text-xl font-bold text-gray-900 mb-2;
+}
+
+.menu-category {
+  @apply text-sm text-yellow-600 font-semibold mb-2 uppercase tracking-wider;
+}
+
+.menu-description {
+  @apply text-gray-600 mb-4;
+}
+
+.menu-price {
+  @apply text-lg font-bold text-black;
+}
+
+/* Category tabs */
+.category-tab {
+  @apply px-6 py-3 m-2 text-lg font-medium rounded-full cursor-pointer transition-all duration-300;
+}
+
+.category-tab.active {
+  @apply bg-black text-white;
+}
+
+.category-tab.inactive {
+  @apply bg-gray-200 text-gray-700;
+}
+
+/* Footer */
+.footer {
+  @apply bg-black text-white py-12;
+}
+
+/* Button styles */
+.btn {
+  @apply inline-block px-6 py-3 rounded-md font-bold transition duration-300 tracking-wide;
+}
+
+.btn-primary {
+  @apply bg-black text-white hover:bg-gray-800;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 text-black hover:bg-gray-300;
+}
+
+/* New York Modern Accents */
+.accent-line {
+  @apply h-1 w-20 bg-yellow-500 mx-auto mb-6;
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply transform transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .section {
+    @apply py-12 px-4;
+  }
+
+  .section-title {
+    @apply text-3xl;
+  }
+
+  .hero-content {
+    @apply p-4;
+  }
+
+  h1 {
+    @apply text-4xl;
+  }
+}
