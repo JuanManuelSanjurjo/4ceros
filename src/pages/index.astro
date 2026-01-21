@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Navbar from '../components/Navbar.astro'
 
 // Import React components
 import HeroSection from '../components/HeroSection.jsx'
@@ -11,8 +10,6 @@ let pageTitle = 'Home - 4Ceros'
 ---
 
 <Layout title={pageTitle}>
-  <Navbar />
-
   <HeroSection client:load />
   <EventsSection client:load />
   <ShowsSection client:load />
