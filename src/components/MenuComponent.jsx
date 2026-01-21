@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import SkeletonMenu from "./SkeletonMenu.jsx";
 import ModalSelectedDish from "./ModalSelectedDish.jsx";
 import MenuItems from "./MenuItems.jsx";
 import Categories from "./Categories.jsx";
+import { fallbackData } from "../fallback-data/fallbackData";
 
 const MenuComponent = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedItem, setSelectedItem] = useState(null);
-  const [menuItems, setMenuItems] = useState([]);
+  const [menuItems, setMenuItems] = useState(fallbackData.menu);
   const [uniqueCategories, setUniqueCategories] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
@@ -16,23 +17,20 @@ const MenuComponent = () => {
     const fetchMenuData = async () => {
       try {
         const response = await fetch(
-          "https://script.google.com/macros/s/AKfycbxwh-FhCq2zmdU166CyM_WfTIHaNZWufY35WhuDblAGWNDcCUfhgDAN9AxGKuTruGGYpw/exec",
+          "https://script.google.com/macros/s/AKfycbw804ugMBiaBvneFHoiJ81Wr3desk36lHPerIhkRRjbEnwCQoe7hmXntaI3kXyHEK294w/exec",
         );
-
-        if (!response.ok) {
+        if (!response.ok)
           throw new Error(`HTTP error! status: ${response.status}`);
-        }
 
         const data = await response.json();
         setMenuItems(data.menu);
 
         const categories = [...new Set(data.menu.map((item) => item.category))];
         setUniqueCategories(categories);
-
-        setIsLoading(false);
       } catch (error) {
         console.error("Error fetching menu data:", error);
         setHasError(true);
+      } finally {
         setIsLoading(false);
       }
     };
@@ -40,7 +38,7 @@ const MenuComponent = () => {
     fetchMenuData();
   }, []);
 
-  const filteredItems = React.useMemo(() => {
+  const filteredItems = useMemo(() => {
     if (selectedCategory === "all") {
       return menuItems;
     }
@@ -55,7 +53,7 @@ const MenuComponent = () => {
     setSelectedItem(null);
   };
 
-  if (isLoading) return <SkeletonMenu />;
+  // if (isLoading) return <SkeletonMenu />;
 
   if (hasError) return <ErrorMenuFetch />;
 

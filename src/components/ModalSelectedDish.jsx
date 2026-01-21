@@ -11,7 +11,7 @@ export default function ModalSelectedDish({ selectedItem, closeModal }) {
         <div className="p-6">
           <div className="flex justify-between items-start mb-4">
             <h2 className="text-2xl font-bold text-gray-900">
-              {selectedItem.name}
+              {selectedItem?.name}
             </h2>
             <button
               className="text-gray-500 hover:text-gray-800 text-3xl leading-none"
@@ -23,18 +23,18 @@ export default function ModalSelectedDish({ selectedItem, closeModal }) {
           <div className="space-y-4">
             <div>
               <img
-                src={selectedItem.imageUrl || "https://placehold.co/600x400"}
-                alt={selectedItem.name}
+                src={selectedItem?.imageUrl || "./src/assets/4ceros.jpg"}
+                alt={selectedItem?.name}
                 className="w-full h-64 object-cover rounded-lg"
               />
             </div>
             <div className="space-y-3">
               <p className="text-yellow-600 font-semibold text-lg">
-                {selectedItem.category}
+                {selectedItem?.category}
               </p>
               <p className="text-gray-700">{selectedItem.description}</p>
               <p className="text-2xl font-bold text-black">
-                {selectedItem.price}
+                {selectedItem?.price}
               </p>
             </div>
           </div>
