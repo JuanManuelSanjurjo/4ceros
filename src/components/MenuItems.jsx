@@ -13,16 +13,16 @@ export default function MenuItems({ openModal, filteredItems }) {
           />
           <div className="menu-content">
             <div className="flex justify-between items-start mb-2">
-              <h3 className="menu-name">{item?.name}</h3>
+              <h3 className="menu-name min-h-[2.5em]">{item?.name}</h3>
               <span className="menu-price">{item?.price}</span>
             </div>
             <span className="menu-category">{item?.category}</span>
-            <p className="menu-description">{item?.description}</p>
+            <p className="menu-description min-h-[3em]">{item?.description}</p>
             <button
               className="btn btn-primary mt-4 w-full py-3 font-semibold"
               onClick={() => openModal(item)}
             >
-              View Details
+              Detalles
             </button>
           </div>
         </div>

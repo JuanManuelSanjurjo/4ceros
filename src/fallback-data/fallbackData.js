@@ -4,7 +4,7 @@ export const fallbackData = {
       name: "Exprimido de naranja",
       description: "Jugo de naranja recién exprimido sin azúcar añadida.",
       imageUrl: "",
-      price: "4500.00",
+      price: "",
       category: "Bebidas",
       stock: "1",
     },
@@ -13,7 +13,7 @@ export const fallbackData = {
       description:
         "Combinación de frutas y verduras prensadas en frío en botella de vidrio.",
       imageUrl: "",
-      price: "5000.00",
+      price: "",
       category: "Bebidas",
       stock: "3",
     },
@@ -23,7 +23,7 @@ export const fallbackData = {
         "Alfajor artesanal relleno con dulce de leche y bañado en chocolate.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=10sfQtPpza1_LjYxS2Zx8KOCsElk84Pt8&sz=w400",
-      price: "3300.00",
+      price: "",
       category: "Sin TACC",
       stock: "0",
     },
@@ -33,7 +33,7 @@ export const fallbackData = {
         "Brownie húmedo de chocolate intenso ideal para acompañar el café.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1Lc9p3CKE7HW5CYrMV8nBWjGKdOHJXeHH&sz=w400",
-      price: "3500.00",
+      price: "",
       category: "Sin TACC",
       stock: "1",
     },
@@ -43,7 +43,7 @@ export const fallbackData = {
         "Pequeña pizza individual con salsa de tomate y abundante muzzarella.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1VIxXcNry1Hiqmw76m2lGjhswrqy2M-iU&sz=w400",
-      price: "9000.00",
+      price: "",
       category: "Sin TACC",
       stock: "1",
     },
@@ -53,7 +53,7 @@ export const fallbackData = {
         "Dos tartas individuales con masa casera y relleno salado del día.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1QZOQxv_z2ywalUFr77YTXatnB5Z9M_XL&sz=w400",
-      price: "15000.00",
+      price: "",
       category: "Sin TACC",
       stock: "0",
     },
@@ -63,7 +63,7 @@ export const fallbackData = {
         "Café corto y concentrado con sabor intenso y cuerpo marcado.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1m7e1Xx0n9A904szpYhRRcPf9dQkqwtzP&sz=w400",
-      price: "3600.00",
+      price: "",
       category: "Cafeteria",
       stock: "2",
     },
@@ -72,7 +72,7 @@ export const fallbackData = {
       description: "Café más largo y suave ideal para disfrutar lentamente.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1Lc9p3CKE7HW5CYrMV8nBWjGKdOHJXeHH&sz=w400",
-      price: "3600.00",
+      price: "",
       category: "Cafeteria",
       stock: "2",
     },
@@ -82,7 +82,7 @@ export const fallbackData = {
         "Espresso con un toque de leche espumada para suavizar el sabor.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1VIxXcNry1Hiqmw76m2lGjhswrqy2M-iU&sz=w400",
-      price: "3600.00",
+      price: "",
       category: "Cafeteria",
       stock: "2",
     },
@@ -92,7 +92,7 @@ export const fallbackData = {
         "Leche caliente con café espresso servido en capas bien definidas.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1QZOQxv_z2ywalUFr77YTXatnB5Z9M_XL&sz=w400",
-      price: "3600.00",
+      price: "",
       category: "Cafeteria",
       stock: "1",
     },
@@ -101,7 +101,7 @@ export const fallbackData = {
       description: "Doble espresso para quienes prefieren un café más fuerte.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=10sfQtPpza1_LjYxS2Zx8KOCsElk84Pt8&sz=w400",
-      price: "5000.00",
+      price: "",
       category: "Cafeteria",
       stock: "3",
     },
@@ -110,7 +110,7 @@ export const fallbackData = {
       description: "Café espresso con abundante leche cremosa y suave.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=10sfQtPpza1_LjYxS2Zx8KOCsElk84Pt8&sz=w400",
-      price: "5000.00",
+      price: "",
       category: "Cafeteria",
       stock: "0",
     },
@@ -119,7 +119,7 @@ export const fallbackData = {
       description: "Café con leche espumada y un toque de cacao por encima.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1Lc9p3CKE7HW5CYrMV8nBWjGKdOHJXeHH&sz=w400",
-      price: "6700.00",
+      price: "",
       category: "Cafeteria",
       stock: "1",
     },
@@ -129,7 +129,7 @@ export const fallbackData = {
         "Leche caliente con barra de chocolate que se derrite en la taza.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1VIxXcNry1Hiqmw76m2lGjhswrqy2M-iU&sz=w400",
-      price: "6700.00",
+      price: "",
       category: "Cafeteria",
       stock: "1",
     },
@@ -139,7 +139,7 @@ export const fallbackData = {
         "Selección de tés en hebras y saquitos de distintos sabores.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1QZOQxv_z2ywalUFr77YTXatnB5Z9M_XL&sz=w400",
-      price: "3600.00",
+      price: "",
       category: "Cafeteria",
       stock: "0",
     },
@@ -148,7 +148,7 @@ export const fallbackData = {
       description: "Budín casero esponjoso en diferentes sabores según el día.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1m7e1Xx0n9A904szpYhRRcPf9dQkqwtzP&sz=w400",
-      price: "3500.00",
+      price: "",
       category: "Pasticcería",
       stock: "2",
     },
@@ -157,7 +157,7 @@ export const fallbackData = {
       description: "Galletas grandes y crocantes con chips y otros sabores.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1Lc9p3CKE7HW5CYrMV8nBWjGKdOHJXeHH&sz=w400",
-      price: "4500.00",
+      price: "",
       category: "Pasticcería",
       stock: "2",
     },
@@ -166,7 +166,7 @@ export const fallbackData = {
       description: "Medialuna de manteca hojaldrada y dorada al horno.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1VIxXcNry1Hiqmw76m2lGjhswrqy2M-iU&sz=w400",
-      price: "4900.00",
+      price: "",
       category: "Pasticcería",
       stock: "2",
     },
@@ -176,7 +176,7 @@ export const fallbackData = {
         "Alfajor suave de maicena relleno con dulce de leche y coco rallado.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1QZOQxv_z2ywalUFr77YTXatnB5Z9M_XL&sz=w400",
-      price: "3600.00",
+      price: "",
       category: "Pasticcería",
       stock: "1",
     },
@@ -185,7 +185,7 @@ export const fallbackData = {
       description: "Clásica medialuna de manteca ideal para acompañar el café.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=10sfQtPpza1_LjYxS2Zx8KOCsElk84Pt8&sz=w400",
-      price: "1300.00",
+      price: "",
       category: "Pasticcería",
       stock: "3",
     },
@@ -194,7 +194,7 @@ export const fallbackData = {
       description: "Medialuna rellena con jamón y queso fundido.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=10sfQtPpza1_LjYxS2Zx8KOCsElk84Pt8&sz=w400",
-      price: "2700.00",
+      price: "",
       category: "Pasticcería",
       stock: "0",
     },
@@ -203,7 +203,7 @@ export const fallbackData = {
       description: "Panecillo tierno con abundante queso en la masa.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1Lc9p3CKE7HW5CYrMV8nBWjGKdOHJXeHH&sz=w400",
-      price: "4900.00",
+      price: "",
       category: "Pasticcería",
       stock: "1",
     },
@@ -212,7 +212,7 @@ export const fallbackData = {
       description: "Alfajor casero bañado en chocolate semiamargo.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1VIxXcNry1Hiqmw76m2lGjhswrqy2M-iU&sz=w400",
-      price: "4000.00",
+      price: "",
       category: "Pasticcería",
       stock: "1",
     },
@@ -222,7 +222,7 @@ export const fallbackData = {
         "Brownie de chocolate con superficie crocante y centro húmedo.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1QZOQxv_z2ywalUFr77YTXatnB5Z9M_XL&sz=w400",
-      price: "5900.00",
+      price: "",
       category: "Reposteria",
       stock: "0",
     },
@@ -231,7 +231,7 @@ export const fallbackData = {
       description: "Tarta de queso cremosa sobre base crocante.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1m7e1Xx0n9A904szpYhRRcPf9dQkqwtzP&sz=w400",
-      price: "5900.00",
+      price: "",
       category: "Reposteria",
       stock: "2",
     },
@@ -241,7 +241,7 @@ export const fallbackData = {
         "Postre clásico a base de galletitas de chocolate y dulce de leche.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1Lc9p3CKE7HW5CYrMV8nBWjGKdOHJXeHH&sz=w400",
-      price: "5900.00",
+      price: "",
       category: "Reposteria",
       stock: "2",
     },
@@ -250,7 +250,7 @@ export const fallbackData = {
       description: "Tarta de limón con crema cítrica y merengue italiano.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1VIxXcNry1Hiqmw76m2lGjhswrqy2M-iU&sz=w400",
-      price: "5900.00",
+      price: "",
       category: "Reposteria",
       stock: "2",
     },
@@ -259,7 +259,7 @@ export const fallbackData = {
       description: "Postre italiano con mascarpone café y bizcochos embebidos.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1QZOQxv_z2ywalUFr77YTXatnB5Z9M_XL&sz=w400",
-      price: "5900.00",
+      price: "",
       category: "Reposteria",
       stock: "1",
     },
@@ -268,7 +268,7 @@ export const fallbackData = {
       description: "Postre cremoso con galletitas Oreo trituradas.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=10sfQtPpza1_LjYxS2Zx8KOCsElk84Pt8&sz=w400",
-      price: "5900.00",
+      price: "",
       category: "Reposteria",
       stock: "3",
     },
@@ -277,7 +277,7 @@ export const fallbackData = {
       description: "Sándwich de lomo a la plancha con queso cheddar fundido.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=10sfQtPpza1_LjYxS2Zx8KOCsElk84Pt8&sz=w400",
-      price: "9900.00",
+      price: "",
       category: "Entre Panes",
       stock: "0",
     },
@@ -286,7 +286,7 @@ export const fallbackData = {
       description: "Sándwich clásico de jamón natural y queso danbo.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1Lc9p3CKE7HW5CYrMV8nBWjGKdOHJXeHH&sz=w400",
-      price: "8300.00",
+      price: "",
       category: "Entre Panes",
       stock: "1",
     },
@@ -296,7 +296,7 @@ export const fallbackData = {
         "Sándwich caliente con jamón muzzarella y huevo a la plancha.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1VIxXcNry1Hiqmw76m2lGjhswrqy2M-iU&sz=w400",
-      price: "9500.00",
+      price: "",
       category: "Entre Panes",
       stock: "1",
     },
@@ -305,7 +305,7 @@ export const fallbackData = {
       description: "Sándwich de pan de campo con jamón crudo queso y manteca.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1QZOQxv_z2ywalUFr77YTXatnB5Z9M_XL&sz=w400",
-      price: "10500.00",
+      price: "",
       category: "Entre Panes",
       stock: "0",
     },
@@ -314,7 +314,7 @@ export const fallbackData = {
       description: "Medio tostado de miga con jamón natural y queso.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1m7e1Xx0n9A904szpYhRRcPf9dQkqwtzP&sz=w400",
-      price: "3900.00",
+      price: "",
       category: "Entre Panes",
       stock: "2",
     },
@@ -323,7 +323,7 @@ export const fallbackData = {
       description: "Tostado completo de miga con jamón natural y queso.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1Lc9p3CKE7HW5CYrMV8nBWjGKdOHJXeHH&sz=w400",
-      price: "7800.00",
+      price: "",
       category: "Entre Panes",
       stock: "2",
     },
@@ -332,7 +332,7 @@ export const fallbackData = {
       description: "Infusión medialunas y jugo exprimido chico.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1VIxXcNry1Hiqmw76m2lGjhswrqy2M-iU&sz=w400",
-      price: "7400.00",
+      price: "",
       category: "Desayunos / Meriendas",
       stock: "2",
     },
@@ -342,7 +342,7 @@ export const fallbackData = {
         "Infusión tostones con queso crema y mermelada y jugo chico.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1QZOQxv_z2ywalUFr77YTXatnB5Z9M_XL&sz=w400",
-      price: "10500.00",
+      price: "",
       category: "Desayunos / Meriendas",
       stock: "1",
     },
@@ -351,7 +351,7 @@ export const fallbackData = {
       description: "Infusión pan con palta queso crema huevo y panceta.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=10sfQtPpza1_LjYxS2Zx8KOCsElk84Pt8&sz=w400",
-      price: "16900.00",
+      price: "",
       category: "Desayunos / Meriendas",
       stock: "3",
     },
@@ -361,7 +361,7 @@ export const fallbackData = {
         "Combo completo para compartir con infusiones torta tostado y jugos.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=10sfQtPpza1_LjYxS2Zx8KOCsElk84Pt8&sz=w400",
-      price: "25500.00",
+      price: "",
       category: "Desayunos / Meriendas",
       stock: "0",
     },
@@ -370,7 +370,7 @@ export const fallbackData = {
       description: "Pizza con salsa de tomate casera muzzarella y aceitunas.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1Lc9p3CKE7HW5CYrMV8nBWjGKdOHJXeHH&sz=w400",
-      price: "17900.00",
+      price: "",
       category: "Pizzas",
       stock: "1",
     },
@@ -380,7 +380,7 @@ export const fallbackData = {
         "Pizza con muzzarella tomate en rodajas ajo perejil y aceitunas.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1VIxXcNry1Hiqmw76m2lGjhswrqy2M-iU&sz=w400",
-      price: "20500.00",
+      price: "",
       category: "Pizzas",
       stock: "1",
     },
@@ -389,7 +389,7 @@ export const fallbackData = {
       description: "Pizza con muzzarella cebolla caramelizada y aceitunas.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1QZOQxv_z2ywalUFr77YTXatnB5Z9M_XL&sz=w400",
-      price: "20500.00",
+      price: "",
       category: "Pizzas",
       stock: "0",
     },
@@ -398,7 +398,7 @@ export const fallbackData = {
       description: "Pizza con jamón morrones asados huevo y aceitunas.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1m7e1Xx0n9A904szpYhRRcPf9dQkqwtzP&sz=w400",
-      price: "21500.00",
+      price: "",
       category: "Pizzas",
       stock: "2",
     },
@@ -408,7 +408,7 @@ export const fallbackData = {
         "Pizza con muzzarella rúcula fresca jamón crudo y parmesano.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1Lc9p3CKE7HW5CYrMV8nBWjGKdOHJXeHH&sz=w400",
-      price: "24500.00",
+      price: "",
       category: "Pizzas",
       stock: "2",
     },
@@ -417,7 +417,7 @@ export const fallbackData = {
       description: "Pizza con muzzarella panceta huevos fritos y verdeo.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1VIxXcNry1Hiqmw76m2lGjhswrqy2M-iU&sz=w400",
-      price: "24500.00",
+      price: "",
       category: "Pizzas",
       stock: "2",
     },
@@ -426,7 +426,7 @@ export const fallbackData = {
       description: "Pizza con longaniza calabresa y aceitunas.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1QZOQxv_z2ywalUFr77YTXatnB5Z9M_XL&sz=w400",
-      price: "21500.00",
+      price: "",
       category: "Pizzas",
       stock: "1",
     },
@@ -435,7 +435,7 @@ export const fallbackData = {
       description: "Pizza con extra queso provolone gratinado y aceitunas.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=10sfQtPpza1_LjYxS2Zx8KOCsElk84Pt8&sz=w400",
-      price: "24500.00",
+      price: "",
       category: "Pizzas",
       stock: "3",
     },
@@ -444,7 +444,7 @@ export const fallbackData = {
       description: "Pizza con champignones queso azul y cebolla caramelizada.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=10sfQtPpza1_LjYxS2Zx8KOCsElk84Pt8&sz=w400",
-      price: "26500.00",
+      price: "",
       category: "Pizzas",
       stock: "0",
     },
@@ -453,7 +453,7 @@ export const fallbackData = {
       description: "Pizza con panceta verdeo cheddar y huevo revuelto.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1Lc9p3CKE7HW5CYrMV8nBWjGKdOHJXeHH&sz=w400",
-      price: "26500.00",
+      price: "",
       category: "Pizzas",
       stock: "1",
     },
@@ -462,7 +462,7 @@ export const fallbackData = {
       description: "Hamburguesa con jamón muzzarella y huevo a la plancha.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1VIxXcNry1Hiqmw76m2lGjhswrqy2M-iU&sz=w400",
-      price: "13600.00",
+      price: "",
       category: "Hamburguesas",
       stock: "1",
     },
@@ -471,7 +471,7 @@ export const fallbackData = {
       description: "Hamburguesa con jamón muzzarella huevo lechuga y tomate.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1QZOQxv_z2ywalUFr77YTXatnB5Z9M_XL&sz=w400",
-      price: "14900.00",
+      price: "",
       category: "Hamburguesas",
       stock: "0",
     },
@@ -480,7 +480,7 @@ export const fallbackData = {
       description: "Hamburguesa con doble queso cheddar.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1m7e1Xx0n9A904szpYhRRcPf9dQkqwtzP&sz=w400",
-      price: "14900.00",
+      price: "",
       category: "Hamburguesas",
       stock: "2",
     },
@@ -489,7 +489,7 @@ export const fallbackData = {
       description: "Hamburguesa con cebolla frita y queso cheddar.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1Lc9p3CKE7HW5CYrMV8nBWjGKdOHJXeHH&sz=w400",
-      price: "15500.00",
+      price: "",
       category: "Hamburguesas",
       stock: "2",
     },
@@ -498,7 +498,7 @@ export const fallbackData = {
       description: "Hamburguesa con queso cheddar y panceta crujiente.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1VIxXcNry1Hiqmw76m2lGjhswrqy2M-iU&sz=w400",
-      price: "16500.00",
+      price: "",
       category: "Hamburguesas",
       stock: "2",
     },
@@ -507,7 +507,7 @@ export const fallbackData = {
       description: "Hamburguesa con provoleta morrones asados y rúcula.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1QZOQxv_z2ywalUFr77YTXatnB5Z9M_XL&sz=w400",
-      price: "17500.00",
+      price: "",
       category: "Hamburguesas",
       stock: "1",
     },
@@ -517,7 +517,7 @@ export const fallbackData = {
         "Hamburguesa con muzzarella champignones queso azul y cebolla caramelizada.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=10sfQtPpza1_LjYxS2Zx8KOCsElk84Pt8&sz=w400",
-      price: "17500.00",
+      price: "",
       category: "Hamburguesas",
       stock: "3",
     },
@@ -527,7 +527,7 @@ export const fallbackData = {
         "Hamburguesa con cheddar emmenthal cebolla caramelizada y salsa mil islas.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=10sfQtPpza1_LjYxS2Zx8KOCsElk84Pt8&sz=w400",
-      price: "17500.00",
+      price: "",
       category: "Hamburguesas",
       stock: "0",
     },
@@ -536,7 +536,7 @@ export const fallbackData = {
       description: "Tres medallones smash con cheddar y panceta crujiente.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1Lc9p3CKE7HW5CYrMV8nBWjGKdOHJXeHH&sz=w400",
-      price: "18500.00",
+      price: "",
       category: "Hamburguesas",
       stock: "1",
     },
@@ -545,7 +545,7 @@ export const fallbackData = {
       description: "Medallón adicional de carne para sumar a tu hamburguesa.",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1VIxXcNry1Hiqmw76m2lGjhswrqy2M-iU&sz=w400",
-      price: "3500.00",
+      price: "",
       category: "Hamburguesas",
       stock: "1",
     },
@@ -555,7 +555,7 @@ export const fallbackData = {
         "Sandwich de carne de cerdo en cocción lenta con mostaza, miel y cerveza Honey, gratinado con muzzarella, acompañado de papas fritas",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1VIxXcNry1Hiqmw76m2lGjhswrqy2M-iU&sz=w400",
-      price: "15900.00",
+      price: "",
       category: "Minutas",
       stock: "2",
     },
@@ -565,7 +565,7 @@ export const fallbackData = {
         "Sandwich de carne de ternera en cocción lenta con champignones, panceta, cerveza Scotish y morrón y cebolla salteadas, acompañado de papas fritas",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1VIxXcNry1Hiqmw76m2lGjhswrqy2M-iU&sz=w400",
-      price: "16900.00",
+      price: "",
       category: "Minutas",
       stock: "2",
     },
@@ -575,7 +575,7 @@ export const fallbackData = {
         "Sandwich de lomo a la plancha con jamón natural, muzzarella y huevo, acompañado de papas fritas",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1VIxXcNry1Hiqmw76m2lGjhswrqy2M-iU&sz=w400",
-      price: "21500.00",
+      price: "",
       category: "Minutas",
       stock: "1",
     },
@@ -585,7 +585,7 @@ export const fallbackData = {
         "Sandwich de lomo a la plancha con provoleta doradita, morrones caseros asados y provenzal, acompañado de papas fritas",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1VIxXcNry1Hiqmw76m2lGjhswrqy2M-iU&sz=w400",
-      price: "23500.00",
+      price: "",
       category: "Minutas",
       stock: "0",
     },
@@ -594,7 +594,7 @@ export const fallbackData = {
       description: "Sandwich de milanesa de ternera acompañado de papas fritas",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1VIxXcNry1Hiqmw76m2lGjhswrqy2M-iU&sz=w400",
-      price: "14900.00",
+      price: "",
       category: "Minutas",
       stock: "0",
     },
@@ -604,7 +604,7 @@ export const fallbackData = {
         "Sandwich de milanesa de ternera, queso cheddar y panceta crujiente acompañado de papas fritas",
       imageUrl:
         "https://drive.google.com/thumbnail?id=1VIxXcNry1Hiqmw76m2lGjhswrqy2M-iU&sz=w400",
-      price: "16500.00",
+      price: "",
       category: "Minutas",
       stock: "3",
     },
@@ -612,7 +612,7 @@ export const fallbackData = {
       name: "Agua o Soda",
       description: "Botella individual de agua o soda.",
       imageUrl: "",
-      price: "3500.00",
+      price: "",
       category: "Bebidas",
       stock: "0",
     },
@@ -620,7 +620,7 @@ export const fallbackData = {
       name: "Gaseosa Línea Coca-Cola",
       description: "Gaseosa de la línea Coca-Cola en presentación individual.",
       imageUrl: "",
-      price: "3500.00",
+      price: "",
       category: "Bebidas",
       stock: "2",
     },
@@ -628,7 +628,7 @@ export const fallbackData = {
       name: "Vaso Limonada",
       description: "Limonada fresca con jengibre y menta.",
       imageUrl: "",
-      price: "4500.00",
+      price: "",
       category: "Bebidas",
       stock: "2",
     },
@@ -636,7 +636,7 @@ export const fallbackData = {
       name: "Jarra de Limonada",
       description: "Jarra de limonada de 1 litro con menta y jengibre.",
       imageUrl: "",
-      price: "8500.00",
+      price: "",
       category: "Bebidas",
       stock: "2",
     },
@@ -644,7 +644,7 @@ export const fallbackData = {
       name: "Pinta de Cerveza Tirada Heller",
       description: "Cerveza tirada Heller en pinta de 500cc.",
       imageUrl: "",
-      price: "4000.00",
+      price: "",
       category: "Bebidas",
       stock: "0",
     },
@@ -652,7 +652,7 @@ export const fallbackData = {
       name: "Gin Tonic",
       description: "Cóctel de gin con tónica en vaso de 500cc.",
       imageUrl: "",
-      price: "6500.00",
+      price: "",
       category: "Bebidas",
       stock: "0",
     },
@@ -660,7 +660,7 @@ export const fallbackData = {
       name: "Fernet con Coca-Cola",
       description: "Trago de fernet con gaseosa cola en vaso de 500cc.",
       imageUrl: "",
-      price: "6500.00",
+      price: "",
       category: "Bebidas",
       stock: "0",
     },
@@ -668,7 +668,7 @@ export const fallbackData = {
       name: "Vermouth Rosso",
       description: "Vermut rosso con gaseosa de pomelo.",
       imageUrl: "",
-      price: "6000.00",
+      price: "",
       category: "Bebidas",
       stock: "0",
     },

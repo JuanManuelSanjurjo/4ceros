@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
-import SkeletonMenu from "./SkeletonMenu.jsx";
+import SkeletonCategories from "./SkeletonCategories.jsx";
 import ModalSelectedDish from "./ModalSelectedDish.jsx";
 import MenuItems from "./MenuItems.jsx";
 import Categories from "./Categories.jsx";
@@ -53,21 +53,31 @@ const MenuComponent = () => {
     setSelectedItem(null);
   };
 
+  const selectCategoryScrollTop = (category) => {
+    setSelectedCategory(category);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   // if (isLoading) return <SkeletonMenu />;
 
   if (hasError) return <ErrorMenuFetch />;
 
   return (
-    <div className="mt-10">
+    <div className="mt-7">
+      {/* Loading  for updated data */}
+      {isLoading && <SkeletonCategories />}
       {/* Category Tabs - Static, always visible */}
-      <Categories
-        uniqueCategories={uniqueCategories}
-        selectedCategory={selectedCategory}
-        setSelectedCategory={setSelectedCategory}
-      />
+      {!isLoading && (
+        <Categories
+          uniqueCategories={uniqueCategories}
+          selectedCategory={selectedCategory}
+          setSelectedCategory={selectCategoryScrollTop}
+        />
+      )}
       {/* Menu Items - Filtered based on selected category */}
-      <MenuItems openModal={openModal} filteredItems={filteredItems} />
-
+      <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <MenuItems openModal={openModal} filteredItems={filteredItems} />
+      </div>
       {/* Modal for displaying item details */}
       {selectedItem && (
         <ModalSelectedDish

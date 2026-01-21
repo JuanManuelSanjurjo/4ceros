@@ -14,6 +14,7 @@
 
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
+  box-sizing: border-box;
   @apply bg-white text-gray-800;
 }
 
@@ -91,8 +92,22 @@ h3 {
 }
 
 /* Category tabs */
+.category-slider {
+  @apply overflow-x-auto overflow-y-hidden whitespace-nowrap cursor-grab active:cursor-grabbing select-none;
+  scrollbar-width: none;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .category-tab {
-  @apply px-6 py-2 md:py-3 md:m-2 text-sm md:text-lg font-medium rounded-full cursor-pointer transition-all duration-300;
+  @apply px-5 py-1 md:m-2 text-xs md:text-base font-medium rounded-full cursor-pointer transition-all duration-300;
 }
 
 .category-tab.active {

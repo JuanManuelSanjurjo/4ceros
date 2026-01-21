@@ -9,8 +9,7 @@ let pageTitle = 'Menu - Restaurant'
 <Layout title={pageTitle}>
   <Navbar />
 
-  <section class=" py-10 md:py-16 bg-gray-50">
-    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  <section class="py-10 md:py-16 bg-gray-50">
       <div class="text-center mb-4">
         <h1 class="text-4xl font-bold text-gray-900 mb-4">Nuestro menú</h1>
         <div class="h-1 w-20 bg-yellow-500 mx-auto "></div>
@@ -19,6 +18,5 @@ let pageTitle = 'Menu - Restaurant'
       <div id="menu-container">
         <MenuComponent client:load />
       </div>
-    </div>
   </section>
 </Layout>

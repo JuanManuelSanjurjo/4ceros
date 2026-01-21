@@ -5,10 +5,10 @@ export default function ModalSelectedDish({ selectedItem, closeModal }) {
       onClick={closeModal}
     >
       <div
-        className="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
+        className="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl "
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="p-6">
+        <div className="p-6 py-8">
           <div className="flex justify-between items-start mb-4">
             <h2 className="text-2xl font-bold text-gray-900">
               {selectedItem?.name}
@@ -32,7 +32,7 @@ export default function ModalSelectedDish({ selectedItem, closeModal }) {
               <p className="text-yellow-600 font-semibold text-lg">
                 {selectedItem?.category}
               </p>
-              <p className="text-gray-700">{selectedItem.description}</p>
+              <p className="text-gray-700 py-4">{selectedItem.description}</p>
               <p className="text-2xl font-bold text-black">
                 {selectedItem?.price}
               </p>
