@@ -1,11 +1,11 @@
 export default function ModalSelectedDish({ selectedItem, closeModal }) {
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4 h-full"
+      className="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4 min-h-dvh"
       onClick={closeModal}
     >
       <div
-        className="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl "
+        className="bg-white rounded-xl max-w-2xl w-full max-h-dvh overflow-y-auto shadow-2xl "
         onClick={(e) => e.stopPropagation()}
       >
         <div className="p-6 py-8">
