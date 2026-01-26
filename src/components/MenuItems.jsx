@@ -7,7 +7,7 @@ export default function MenuItems({ openModal, filteredItems }) {
           className={`menu-card card-hovern ${!item.stock ? "hidden" : item.stock < 1 ? "grayscale opacity-80" : ""}`}
         >
           <img
-            src={item?.imageUrl || "./src/assets/4ceros.jpg"}
+            src={item?.imageUrl || "./4ceros.jpg"}
             alt={item?.name}
             className={`menu-image`}
           />

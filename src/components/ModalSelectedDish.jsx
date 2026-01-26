@@ -1,5 +1,3 @@
-import logo from "../assets/4ceros.jpg";
-
 export default function ModalSelectedDish({ selectedItem, closeModal }) {
   return (
     <div
@@ -25,7 +23,7 @@ export default function ModalSelectedDish({ selectedItem, closeModal }) {
           <div className="space-y-4">
             <div>
               <img
-                src={selectedItem?.imageUrl || logo}
+                src={selectedItem?.imageUrl || "./4ceros.jpg"}
                 alt={selectedItem?.name}
                 className="w-full h-64 object-cover rounded-lg"
               />
