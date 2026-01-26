@@ -1,6 +1,6 @@
 export default function SkeletonCategories() {
   return (
-    <div className="mt-8 justify-center">
+    <div className="slider mt-8 justify-center">
       {/* Loading skeleton for category tabs */}
       <h3 className="text-center py-6">Actualizando...</h3>
       <div className="flex flex-wrap justify-center gap-2 mb-12">
