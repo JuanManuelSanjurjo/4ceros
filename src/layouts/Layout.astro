@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
 const { title = 'Restaurant' } = Astro.props;
 ---
 
@@ -9,14 +10,15 @@ const { title = 'Restaurant' } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/jpeg"  href="/src/assets/4ceros.jpg">
     <title>{title}</title>
   </head>
   <body>
     <Navbar />
     <slot />
     <Footer />
+    <WhatsAppButton />
   </body>
 </html>
