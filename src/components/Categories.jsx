@@ -4,7 +4,7 @@ export default function Categories({
   setSelectedCategory,
 }) {
   return (
-    <div className="category-slider flex mx-2 slide-from-top flex-wrap justify-center gap-2 mb-4 md:mb-12 sticky top-24 bg-gray-50/80 backdrop-blur-md z-50 p-4 rounded-md md:rounded-3xl">
+    <div className="category-slider shadow-lg mx-2 flex slide-from-top flex-wrap justify-stretch gap-1 mb-4 md:mb-12 sticky top-[65px] md:top-24 bg-gray-50/80 backdrop-blur-md z-50 md:p-4 p-2 rounded-md md:rounded-3xl">
       <button
         className={`category-tab ${
           selectedCategory === "all"
@@ -18,7 +18,7 @@ export default function Categories({
       {uniqueCategories.map((category) => (
         <button
           key={category}
-          className={`category-tab ${
+          className={`category-tab flex-grow ${
             selectedCategory === category
               ? "active bg-black text-white"
               : "inactive bg-gray-200 text-gray-700"

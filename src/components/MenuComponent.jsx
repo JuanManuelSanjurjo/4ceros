@@ -75,7 +75,7 @@ const MenuComponent = () => {
         />
       )}
       {/* Menu Items - Filtered based on selected category */}
-      <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <MenuItems openModal={openModal} filteredItems={filteredItems} />
       </div>
       {/* Modal for displaying item details */}
